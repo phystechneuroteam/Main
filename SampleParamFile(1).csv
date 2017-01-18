@@ -1,0 +1,7 @@
+Path,C:\CA1_8 test\
+Filenames,CA1_8_recording_20160929_165135-002.tif_corrected_TESTy_10s.tif;CA1_8_recording_20160930_171000-002.tif_corrected.tif
+Crop,1;1;520;500
+Trim,1;63;1;53
+Sbf,1
+MC_roi,1
+MC_crop,20
