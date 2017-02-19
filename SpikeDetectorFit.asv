@@ -1,7 +1,7 @@
 function SpikeDetectorFit(path, filename, thr, t_before, t_after, max_t_on, min_t_off, toler, j_wind, sp_ampl, aux)
 
 %18 Feb 2017 Vova: added options: 1) to write/not to write spike
-%amplitudes; 2) to write/not to write auxiliary tables FITS and THRES
+%amplitudes; 2) to write/not to wr
 
 %29 Dec 2016 Vova: fixed minor bugs, nearest peak searching: median filter --> average filter
 
@@ -27,8 +27,8 @@ if nargin < 2
 end
 
 if nargin < 11 || isempty(thr) || isempty(t_before) || isempty(t_after) || isempty(max_t_on) || isempty(min_t_off) || isempty(toler) || isempty(j_wind) || isempty(sp_ampl) || isempty(aux)
-    prompt = {'Threshold level, MADs', 'Window interval before threshold crossing, s', 'Window interval after nearest peak, s', 'Maximal e-fold rise time, s', 'Minimal e-fold decay time, s', 'Fitting tolerance, 0..1', 'Peak smoothing window half-time, frames (1 = skip peak smoothing)','Write spike amplitudes (vs ones) - y/n', 'Write auxiliary tables (FITS, THRES) - y/n'}; 
-    default_data = {'4','1','1','0.5','0.5','0.8','5', 'y', 'n'};
+    prompt = {'Threshold level, MADs', 'Window interval before threshold crossing, s', 'Window interval after nearest peak, s', 'Maximal e-fold rise time, s', 'Minimal e-fold decay time, s', 'Fitting tolerance, 0..1', 'Peak smoothing window half-time, frames (1 = skip peak smoothing)','Write spike amplitudes (vs ones) - y/n', 'Write auxilary tables (FITS, THRES) - y/n'}; 
+    default_data = {'4','1','1','0.5','0.5','0.8','5', 'y'};
     options.Resize='on';
     dlg_data = inputdlg(prompt, 'Parameters', 1, default_data, options);
 
@@ -57,7 +57,7 @@ SPIKES(2:dim(1)+1,1) = X;
 FITS = zeros(dim(1)+1,dim(2)); 
 FITS(2:dim(1)+1,1) = X;
 
-%auxiliary array of threshold level
+%auxilary array of threshold level
 THRES = zeros(dim(1)+1,dim(2)); 
 THRES(2:dim(1)+1,1) = X;
 
