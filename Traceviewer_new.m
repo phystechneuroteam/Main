@@ -3,7 +3,7 @@
 %Y-axis (in %DF/F) and parameters of periodical gray shadings on the plot at the X
 %axis
 
-[filename, path] = uigetfile('*.csv','Select CSV file with traces:', 'J:\CA_1\CA1_1_20160915\df_recording_20160915_130942_corrected.tif_neuropil_40.csv_medlowpassed_5.000000e-01_60.csv');
+[filename, path] = uigetfile('*.csv','Select CSV file with traces:', 'C:\YTNC_GC_csv\df_recording_20160915_130942_corrected.tif_neuropil_40.csv_medlowpassed_5.000000e-01_60.csv');
 
 
 prompt = {'Offset between traces (1 = maximum):', 'Normalization value (0 - absolute maximum)', 'Line width, px', 'Redraw figure (0/1 -no/yes)', 'Spike depicting mode (0/1/2 - do not draw/draw/load .csv)','Spike treshold, MADs','Spike half-decay time, s'}; 
