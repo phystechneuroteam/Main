@@ -18,14 +18,14 @@ end
 
 TNEW = zeros(numstr + 1, dim(2));
 TNEW(2:numstr+1, 1) = (1:numstr).*step;
-m = 2;
+m = 1;
 h = waitbar(0, sprintf('Processing file %d of %d', 0,  numfiles(2))); 
 
 for f = 1:numfiles(2)
     waitbar(f/numfiles(2), h, sprintf('Processing file %d of %d', f,  numfiles(2)));
     T = readtable(sprintf('%s%s',path,filename{f}));
     dim = size(T);
-    TNEW(m:m+dim(1)-1,1:dim(2)) = T{1:dim(1),1:dim(2)};
+    TNEW(m+1:m+dim(1),2:dim(2)) = T{1:dim(1),2:dim(2)};
     m = m + dim(1);
 end
 

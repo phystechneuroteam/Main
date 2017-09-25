@@ -74,7 +74,7 @@ for i = 1:dimstat+1
     STATFIT{i,1} = (i-1)/fps;
 end
 
-STAT{dimstat+2:dimstat+3,1} = 0;
+STAT{i+1:i+2,1} = 0;
 
 h = waitbar(0, sprintf('Processing trace %d of %d', 0,  dim(2)-1)); 
 
@@ -100,7 +100,7 @@ for i = 2:dim(2)
             %fitting
             j_start = round(max(2, j - t_before*fps));
             j_end = round(min(dim(1)-1, j_peak + t_after*fps));
-            
+
             [fitresult, gof] = SpikeFit(X(j_start:j_end), T{j_start:j_end, i}, backgr, m_dev*thr, max_t_on, min_t_off);
             
             if gof.rsquare >= toler

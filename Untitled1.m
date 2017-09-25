@@ -1,0 +1,2 @@
+SpikeDetectorFitStat('G:\YTNC_GC_csv\test_1_1\', 'CA1_12_20161110_113448_corrected.tif_neuropil_60.csv_conc.csv', 4, 1, 1, 0.5, 0.5, 0.9, 5, 'y', 3, 6);
+SpikeDetectorFitStat('G:\YTNC_GC_csv\test_1_1\', 'CA1_13_20161110_121122_corrected.tif_neuropil_60.csv_conc.csv', 4, 1, 1, 0.5, 0.5, 0.9, 5, 'y', 3, 6);
